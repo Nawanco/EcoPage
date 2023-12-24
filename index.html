@@ -200,14 +200,14 @@
 
        $('.days').on({
         mouseenter: function () {
-          $('.days').each(function(){ $(this).css('background','none');});
+          //$('.days').each(function(){ $(this).css('background','none');});
          //$('.days').each(function(){ $(this).css('background','none');});
-         //$(this).css('background-image','url("img.jpg")');
+          $(this).css('background','none');
         },
         mouseout: function () {
 
-
-         $('.days').each(function(){ $(this).css('background-image','url("img.jpg")');});
+          $(this).css('background-image','url("img.jpg")');
+         //$('.days').each(function(){ $(this).css('background-image','url("img.jpg")');});
         }
       }); 
 

@@ -8,53 +8,127 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <style type="text/css">
+
+      @font-face {
+        font-family: myFirstFont;
+        src: url(snoopy_reg-webfont.otf);
+      }
+
+      .footer{
+        padding: 0px !important;
+        font-size: 1px !important;
+      }
+      .numbercora{
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+            top: -30px;
+            left: 95%;
+      }
       .days{
-        border: solid 1px #BFB0CF;
+        border: solid 5px white;
         padding: 35px;
-         background-image: url("img.jpg");
-        background-size: cover; 
+        background-image:  url("coraar.png"), url("work.jpg");
+        background-size: 35% 50%, cover; 
+        background-position: 110% 0%;
+        background-repeat: no-repeat;
+      }
+
+      .daysweekend{
+        border: solid 5px white;
+        padding: 35px;
+        background-color: #FFE6EA;
+        background-image: url("gatito.png"), url("coraar.png");
+        background-size: 60% 100%,35% 50%;
+        background-position: 10% 1%,110% 0%;
+        background-repeat: no-repeat;
       }
 
       .bgnone{
-         /* background: none !important; 
-         opacity: 0.4; */
-         /*background: #cda69e9e !important;*/ 
 
-        background: #d6c8e1 url(bgimg.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom right;
+        background: none;
+        border: solid 5px transparent;
       }
 
       .daystitle{
-          padding: 35px;
-          background: #BFB0CF;
-          /* background-size: auto; */
+          padding: 15px;
+          font-size: 40px;
+
       }
 
       html{
+
 
       width: 100%;
        height: 100%;
       }
       body{
-       /*background: #775c2d;*/
-        /* background-image: url(bgr.jpg), url(bgl.jpg);
-        background-position: right , left ;
-        background-repeat: no-repeat, no-repeat;
-        background-size: contain; */
 
-        background: #d6c8e1;
-        
+         ont-family: "myFirstFont";
+        background-color: white;
+        background: url(bgwhite.jpg), url(bgwhite.jpg);
+        background-size: 40% 39%;
+        background-position: 250px -95px,bottom;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+
         width: 100%;
         height: 100%;
       }
       .container{
-        background: #DBCCE9;
+        /*background: #DBCCE9;*/
         min-height: 100vh;
+        opacity: 0.8;
       }
 
 
+      /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+      .flip-card {
+        background-color: red;
+        width: auto;
+        height: auto; 
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
+
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Position the front and back side */
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+      }
 
     </style>
   </head>
@@ -79,7 +153,7 @@
     </div>
 
     <div class="row">
-      <div class="col days bgnone">&nbsp;
+      <div class="col days  daysweekend bgnone">&nbsp;
       </div>
       <div class="col days bgnone">&nbsp;
       </div>
@@ -89,86 +163,131 @@
       </div>
       <div class="col days bgnone">&nbsp;
       </div>
-      <div class="col days">1
+      <div class="col days">
+        <div class="numbercora">1</div>
+
+        <!-- <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            DIA UNO
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div> -->
+
       </div>
-      <div class="col days">2
+      <div class="col days daysweekend">
+        <div class="numbercora">2</div>
       </div>
     </div>
 
     <div class="row">
-      <div class="col days">3
+      <div class="col  daysweekend">
+        <div class="numbercora">3</div>
       </div>
-      <div class="col days">4
+      <div class="col days">
+        <div class="numbercora">4</div>
       </div>
-      <div class="col days">5
+      <div class="col days">
+        <div class="numbercora">5</div>
       </div>
-      <div class="col days">6
+      <div class="col days">
+        <div class="numbercora">6</div>
       </div>
-      <div class="col days">7
+      <div class="col days">
+        <div class="numbercora">7</div>
       </div>
-      <div class="col days">8
+      <div class="col days">
+        <div class="numbercora">8</div>
       </div>
-      <div class="col days">9
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col days">10
-      </div>
-      <div class="col days">11
-      </div>
-      <div class="col days">12
-      </div>
-      <div class="col days">13
-      </div>
-      <div class="col days">14
-      </div>
-      <div class="col days">15
-      </div>
-      <div class="col days">16
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col days">17
-      </div>
-      <div class="col days">18
-      </div>
-      <div class="col days">19
-      </div>
-      <div class="col days">20
-      </div>
-      <div class="col days">21
-      </div>
-      <div class="col days">22
-      </div>
-      <div class="col days">23
+      <div class="col  daysweekend">
+        <div class="numbercora">9</div>
       </div>
     </div>
 
 
     <div class="row">
-      <div class="col days">24
+      <div class="col  daysweekend">
+        <div class="numbercora">10</div>
       </div>
-      <div class="col days">25
+      <div class="col days">
+        <div class="numbercora">11</div>
       </div>
-      <div class="col days">26
+      <div class="col days">
+        <div class="numbercora">12</div>
       </div>
-      <div class="col days">27
+      <div class="col days">
+        <div class="numbercora">13</div>
       </div>
-      <div class="col days">28
+      <div class="col days">
+        <div class="numbercora">14</div>
       </div>
-      <div class="col days">29
+      <div class="col days">
+        <div class="numbercora">15</div>
       </div>
-      <div class="col days">30
+      <div class="col  daysweekend">
+        <div class="numbercora">16</div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col  daysweekend">
+        <div class="numbercora">17</div>
+      </div>
+      <div class="col days">
+        <div class="numbercora">18</div>
+      </div>
+      <div class="col days">
+        <div class="numbercora">19</div>
+      </div>
+      <div class="col days">
+        <div class="numbercora">20</div>
+      </div>
+      <div class="col days">
+        <div class="numbercora">21</div>
+      </div>
+      <div class="col days">
+        <div class="numbercora">22</div>
+      </div>
+      <div class="col  daysweekend">
+        <div class="numbercora">23</div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col  daysweekend">
+        <div class="numbercora">24</div>
+      </div>
+      <div class="col days">
+        <div class="numbercora">25</div>
+      </div>
+      <div class="col days">
+        <div class="numbercora">26</div>
+      </div>
+      <div class="col days">
+        <div class="numbercora">27</div>
+      </div>
+      <div class="col days">
+        <div class="numbercora">28</div>
+      </div>
+      <div class="col days">
+        <div class="numbercora">29</div>
+      </div>
+      <div class="col  daysweekend">
+        <div class="numbercora">30</div>
       </div>
     </div>
 
 
      <div class="row">
-      <div class="col days">31
+      <div class="col  daysweekend">
+        <div class="numbercora">31</div>
       </div>
       <div class="col days bgnone">&nbsp;
       </div>
@@ -180,7 +299,7 @@
       </div>
       <div class="col days bgnone">&nbsp;
       </div>
-      <div class="col days bgnone">&nbsp;
+      <div class="col   daysweekend bgnone">&nbsp;
       </div>
     </div>
 

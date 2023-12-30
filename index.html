@@ -1,129 +1,24 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wandanomics</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wandanomics</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <style type="text/css">
-
-      @font-face {
-        font-family: myFirstFont;
-        src: url(snoopy_reg-webfont.otf);
+<style type="text/css">
+	
+	@font-face {
+        font-family: myFont;
+        src: url(GreatVibes-Regular.ttf);
+      }
+      .modal-body{
+      	min-height: 100px;
+	    font-family: cursive;
+	    font-size: 10px;
       }
 
-  
-
-
-
-
-      .footer{
-        padding: 0px !important;
-        font-size: 1px !important;
-      }
-      .numbercora{
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            position: relative;
-            top: -30px;
-            left: 95%;
-      }
-
-      
-
-
-      .days{
-        border: solid 5px white;
-        padding: 35px;
-        background-image:  url("coraar.png"), url("work.jpg");
-        background-size: 35% 50%, cover; 
-        background-position: 110% 0%;
-        background-repeat: no-repeat;
-      }
-
-      .dayinfo:hover {
-
-        border: solid 5px white;
-        padding: 35px;
-        background-image:  url("coraar.png"), url("bgwhite.jpg");
-        background-size: 35% 50%, cover; 
-        background-position: 110% 0%;
-        background-repeat: no-repeat;
-
-      }
-
-      .daysweekend{
-        border: solid 5px white;
-        padding: 35px;
-        background-color: #FFE6EA;
-        background-image: url("gatito.png"), url("coraar.png");
-        background-size: 60% 100%,35% 50%;
-        background-position: 10% 1%,110% 0%;
-        background-repeat: no-repeat;
-      }
-
-      .bgnone{
-
-        background: none;
-        border: solid 5px transparent;
-      }
-
-      .daystitle{
-          padding: 15px;
-          font-size: 40px;
-
-      }
-
-      html{
-
-
-      width: 100%;
-       height: 100%;
-      }
-      body{
-
-        font-family: "myFirstFont";
-        background-color: white;
-        background: url(bgwhite.jpg), url(bgwhite.jpg);
-        background-size: 40% 39%;
-        background-position: 250px -95px,bottom;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
-      }
-      .container{
-        /*background: #DBCCE9;*/
-        min-height: 100vh;
-        opacity: 0.8;
-      }
-
-      .overlay {
-        position: relative;
-        top: -55px;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: #008CBA;
-      }
-
-      .days:hover .overlay {
-        opacity: 1;
-      }
-
-      .text {
-        color: white;
-        font-size: 10px;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-
-      .modal-content{
+       .modal-content{
         /* background-color: white; */ 
             background-image: url(bgwhite.jpg);
             background-size: 70%;
@@ -133,325 +28,325 @@
       }
 
       .modal-header{
-        border: none;
+        /*border: none;*/ 
+        border-bottom: solid 2px #b9798a;
       }
 
       .modal-footer{
         border: none;
       }
-      .dn{
-        display: none;
-      }
 
 
 
-   @media only screen and (max-width: 1200px) {
-        #titlesheader{
-          display: none;
-        }
-        #dayscalendar{
-          margin-top : 90px;
-        }
-    }
+	.rowheader{
 
+		margin-bottom: 8px;
+		margin-top: 8px;
+	}
 
-    @media only screen and (max-width: 1150px) {
-        .numbercora{
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            position: relative;
-            top: -30px;
-            left: 100%;
-          }
+	.col{
+		background-color: #ffeff2;
+		border: solid 2px #b9798a;
+	}
 
-          body{
-            font-family: "myFirstFont";
-            background-color: white;
-            background: url(bgwhite.jpg), url(bgwhite.jpg);
-            background-size: 70% 39%;
-            background-position: 1px -95px,bottom;
+	.title{
+		background: #FFFFFF;
+		min-height: 45px;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 40px; 
+		font-size: 30px;
+	}
+	.portfoliotitle{
+		margin: 10px;
+		padding: 10px; 
+		background: white; 
+		border: solid 2px #b9798a; border-radius: 15px;
+		width: 90%;
+		font-size: 30px;
+	}
+	.dayscol{
+		min-height: 100px;
+		padding: 0px;
+	}
+
+	 .dayscol:hover{
+	 	min-height: 100px;
+		padding: 0px;
+         	background: url(bgwhite.jpg), white;
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-          }
-
       }
 
+	.buble-heart{
+		    height: 40px;
+		    width: 40px;
+		    background: url(corazon-bubble.png);
+		    background-position: center;
+		    background-size: contain;
+		    text-align: center;
+		    padding-top: 10px; 
+		    color: #000000;
+		    font-size: 18px;
+	}
+	.bgimages{
+		background: url(fox.png), url(wandarita.png), #ffeff2;;
+    	background-position: top -90px right 100px, top -30px left 100px;
+    	background-repeat: no-repeat;
+    	background-size: 22%,12%;
+	}
 
+	body{
+		font-family: "myFont";
+		width: 100%;
+    	height: 100%;
+    	background: url(skybg.jpg);
+	}
 
-    @media only screen and (max-width: 1050px) {
-        .numbercora{
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            position: relative;
-            top: -30px;
-            left: 120%;
-          }
+</style>
 
-          body{
-            font-family: "myFirstFont";
-            background-color: white;
-            background: url(bgwhite.jpg), url(bgwhite.jpg);
-            background-size: 70% 39%;
-            background-position: 1px -95px,bottom;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-          }
+</head>
+<body>
 
-      }
+<div class="container">
+	<div class="row content">
+		
+		<div class="row rowheader">
+			<div class="col rowheader bgimages">
+				<div style="display: flex; justify-content: space-between;">
+					<div style="width: 30%; padding: 10px; font-size: 20px;">Hola,<br>Soy Wanda</div>
+					<div style="width: 60%; text-align: center;">
+						<div class="portfoliotitle">
+							Portafolio: Wanda Nahomy Conde
+						</div>
+					</div>
+					<div style="width: 30%; padding: 10px;">
+						&nbsp;
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
 
+		<div class="row">
 
-      @media only screen and (max-width: 950px) {
-        .numbercora{
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            position: relative;
-            top: -30px;
-            left: 150%;
-          }
+			<div class="col title">
+				Domingo
+			</div>
+			<div class="col title">
+				Lunes
+			</div>
+			<div class="col title">
+				Martes
+			</div>
+			<div class="col title">
+				Miercoles
+			</div>
+			<div class="col title">
+				Jueves
+			</div>
+			<div class="col title">
+				Viernes
+			</div>
+			<div class="col title">
+				Sabado
+			</div>
 
-          body{
-            font-family: "myFirstFont";
-            background-color: white;
-            background: url(bgwhite.jpg), url(bgwhite.jpg);
-            background-size: 70% 39%;
-            background-position: 1px -95px,bottom;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-          }
-      }
+			
+		</div>
 
+		<div class="row">
+			
+			<div class="col dayscol">
+				<div class="buble-heart">&nbsp;</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol">
+				<div class="buble-heart">&nbsp;</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol">
+				<div class="buble-heart">&nbsp;</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol">
+				<div class="buble-heart">&nbsp;</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol">
+				<div class="buble-heart">&nbsp;</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal01').modal('show');">
+				<div class="buble-heart">1</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" >
+				<div class="buble-heart">2</div>
+				&nbsp;
+			</div>
+		</div>
+		<div class="row">
+			
+			<div class="col dayscol" >
+				<div class="buble-heart">3</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal04').modal('show');">
+				<div class="buble-heart">4</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal04').modal('show');">
+				<div class="buble-heart">5</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal06').modal('show');">
+				<div class="buble-heart">6</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal07').modal('show');">
+				<div class="buble-heart">7</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal08').modal('show');">
+				<div class="buble-heart">8</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" >
+				<div class="buble-heart">9</div>
+				&nbsp;
+			</div>
+		</div>
+		<div class="row">
+			
+			<div class="col dayscol" >
+				<div class="buble-heart">10</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal11').modal('show');">
+				<div class="buble-heart">11</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal12').modal('show');">
+				<div class="buble-heart">12</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal13').modal('show');">
+				<div class="buble-heart">13</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal14').modal('show');">
+				<div class="buble-heart">14</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal15').modal('show');">
+				<div class="buble-heart">15</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" >
+				<div class="buble-heart">16</div>
+				&nbsp;
+			</div>
+		</div>
+		<div class="row">
+			
+			<div class="col dayscol" >
+				<div class="buble-heart">17</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal18').modal('show');">
+				<div class="buble-heart">18</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal19').modal('show');">
+				<div class="buble-heart">19</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal20').modal('show');">
+				<div class="buble-heart">20</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal21').modal('show');">
+				<div class="buble-heart">21</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal22').modal('show');">
+				<div class="buble-heart">22</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" >
+				<div class="buble-heart">23</div>
+				&nbsp;
+			</div>
+		</div>
+		<div class="row">
+			
+			<div class="col dayscol" >
+				<div class="buble-heart">24</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal25').modal('show');">
+				<div class="buble-heart">25</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal26').modal('show');">
+				<div class="buble-heart">26</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal27').modal('show');">
+				<div class="buble-heart">27</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal28').modal('show');">
+				<div class="buble-heart">28</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" onclick="$('#modal29').modal('show');">
+				<div class="buble-heart">29</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol" >
+				<div class="buble-heart">30</div>
+				&nbsp;
+			</div>
+		</div>
+		<div class="row">
+			
+			<div class="col dayscol" >
+				<div class="buble-heart">31</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol">
+				<div class="buble-heart">&nbsp;</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol">
+				<div class="buble-heart">&nbsp;</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol">
+				<div class="buble-heart">&nbsp;</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol">
+				<div class="buble-heart">&nbsp;</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol">
+				<div class="buble-heart">&nbsp;</div>
+				&nbsp;
+			</div>
+			<div class="col dayscol">
+				<div class="buble-heart">&nbsp;</div>
+				&nbsp;
+			</div>
+		</div>
+	
+	</div>
+</div>
 
-
-       @media only screen and (max-width: 750px) {
-          body{
-            font-family: "myFirstFont";
-            background-color: white;
-            background:  url(bgwhite.jpg) bottom center no-repeat fixed;
-    
-            width: 100%;
-            height: 100%;
-          }
-          .daysweekend, .bgnone{
-            display: none;
-          }
-
-          .numbercora{
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            position: relative;
-            top: -30px;
-            left: 110%;
-          }
-      }
-
-
-    @media only screen and (max-width: 650px) {
-   
-          .numbercora{
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            position: relative;
-            top: -30px;
-            left: 160%;
-          }
-          .dn, .dn2{
-            display: flex !important;
-          }
-
-          #dayscalendar{
-            margin-top : 30px;
-          }
-      }
-
-
-    @media only screen and (max-width: 550px) {
-          .container{
-            width: max-content !important;
-          }
-      }
-
-
-    </style>
-  </head>
-  <body >
-    <div class="container">
-
-    <div class="row dn">
-        <div class="col">
-          <h1 style="font-size: 50px;">Portafolio: Wanda Conde</h1>
-        </div>
-    </div>
-    
-    <div class="row" id="titlesheader">
-      <div class="col daystitle">Domingo
-      </div>
-      <div class="col daystitle">Lunes
-      </div>
-      <div class="col daystitle">Martes
-      </div>
-      <div class="col daystitle">Miercoles
-      </div>
-      <div class="col daystitle">Jueves
-      </div>
-      <div class="col daystitle">Viernes
-      </div>
-      <div class="col daystitle">Sabado
-      </div>
-    </div>
-
-    <div class="row" id="dayscalendar">
-      <div class="col days   daysweekend bgnone">&nbsp;
-      </div>
-      <div class="col days  bgnone dn2 dn3">&nbsp;
-      </div>
-      <div class="col days  bgnone dn2">&nbsp;
-      </div>
-      <div class="col days  bgnone dn2">&nbsp;
-      </div>
-      <div class="col days  bgnone dn2">&nbsp;
-      </div>
-      <div class="col days  dayinfo"  onclick="$('#modal01').modal('show');">
-        <div class="numbercora">1</div>
-      </div>
-      <div class="col days  daysweekend">
-        <div class="numbercora ">2</div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col  daysweekend">
-        <div class="numbercora">3</div>
-      </div>
-      <div class="col days dayinfo " onclick="$('#modal04').modal('show');">
-        <div class="numbercora">4</div>
-      </div>
-      <div class="col days dayinfo " onclick="$('#modal05').modal('show');">
-        <div class="numbercora">5</div>
-      </div>
-      <div class="col days dayinfo " onclick="$('#modal06').modal('show');">
-        <div class="numbercora">6</div>
-      </div>
-      <div class="col days dayinfo " onclick="$('#modal07').modal('show');">
-        <div class="numbercora">7</div>
-      </div>
-      <div class="col days dayinfo " onclick="$('#modal08').modal('show');">
-        <div class="numbercora">8</div>
-      </div>
-      <div class="col  daysweekend">
-        <div class="numbercora">9</div>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col  daysweekend">
-        <div class="numbercora">10</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal11').modal('show');">
-        <div class="numbercora">11</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal12').modal('show');">
-        <div class="numbercora">12</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal13').modal('show');">
-        <div class="numbercora">13</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal14').modal('show');">
-        <div class="numbercora">14</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal15').modal('show');">
-        <div class="numbercora">15</div>
-      </div>
-      <div class="col  daysweekend" onclick="$('#modal16').modal('show');">
-        <div class="numbercora">16</div>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col  daysweekend">
-        <div class="numbercora">17</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal18').modal('show');">
-        <div class="numbercora">18</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal19').modal('show');">
-        <div class="numbercora">19</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal20').modal('show');">
-        <div class="numbercora">20</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal21').modal('show');">
-        <div class="numbercora">21</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal22').modal('show');">
-        <div class="numbercora">22</div>
-      </div>
-      <div class="col  daysweekend">
-        <div class="numbercora">23</div>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col  daysweekend">
-        <div class="numbercora">24</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal25').modal('show');">
-        <div class="numbercora">25</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal26').modal('show');">
-        <div class="numbercora">26</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal27').modal('show');">
-        <div class="numbercora">27</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal28').modal('show');">
-        <div class="numbercora">28</div>
-      </div>
-      <div class="col days dayinfo" onclick="$('#modal29').modal('show');">
-        <div class="numbercora">29</div>
-      </div>
-      <div class="col  daysweekend">
-        <div class="numbercora">30</div>
-      </div> 
-    </div>
-
-
-     <div class="row">
-      <div class="col  daysweekend">
-        <div class="numbercora">31</div>
-      </div>
-      <div class="col days  bgnone">&nbsp;
-      </div>
-      <div class="col days  bgnone">&nbsp;
-      </div>
-      <div class="col days  bgnone">&nbsp;
-      </div>
-      <div class="col days  bgnone">&nbsp;
-      </div>
-      <div class="col days  bgnone">&nbsp;
-      </div>
-      <div class="col   daysweekend bgnone">&nbsp;
-      </div>
-    </div>
-
-    <div class="row daystitle footer">
-      &nbsp;
-    </div>
-
-
-   
-    </div>
-  </div>
 
 
 <div class="modal fade" id="modal01" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -984,8 +879,9 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script type="text/javascript">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
 
 
 $(document).ready(function(){
@@ -1260,11 +1156,7 @@ $(document).ready(function(){
 
 
  });
+  </script>
 
-
-
-
-
-    </script>
-  </body>
+</body>
 </html>
